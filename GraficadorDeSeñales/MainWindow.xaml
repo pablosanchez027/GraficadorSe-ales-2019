@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GraficadorDeSeñales"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Graficador de Señales" Height="450" Width="800">
     <Grid ScrollViewer.HorizontalScrollBarVisibility="Visible">
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
