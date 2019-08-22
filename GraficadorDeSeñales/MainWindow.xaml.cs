@@ -43,13 +43,17 @@ namespace GraficadorDeSeñales
             plnGrafica.Points.Clear();
             for(double i = tiempoinicial; i <= tiempofinal; i += periodioMuestreo)
             {
-                plnGrafica.Points.Add(adaptarCoordenadas(i,señal.evaluar(i)));
+                plnGrafica.Points.Add(adaptarCoordenadas(i,señal.evaluar(i), tiempoinicial));
             }
 
+            plnEjeX.Points.Clear();
+            plnEjeX.Points.Add(adaptarCoordenadas(tiempoinicial, 0.0, tiempoinicial));
+            plnEjeX.Points.Add(adaptarCoordenadas(tiempofinal, 0.0, tiempoinicial));
+
         }
-        public Point adaptarCoordenadas(double x, double y)
+        public Point adaptarCoordenadas(double x, double y, double tiempoinicial)
         {
-            return new Point(x * srcGrafica.Width, (-1 * ( y * ((srcGrafica.Height/2.0) -25 ) )) + (srcGrafica.Height / 2.0) );
+            return new Point((x - tiempoinicial) * srcGrafica.Width, (-1 * ( y * ((srcGrafica.Height/2.0) -25 ) )) + (srcGrafica.Height / 2.0) );
         }
     }
 }
