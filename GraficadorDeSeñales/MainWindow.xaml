@@ -22,7 +22,7 @@
 
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="162,146,0,0" Text="Frecuencia de muestreo:" Height="16" Width="129"/>
         <TextBox x:Name="txtFrecuenciaMuestreo" HorizontalAlignment="Left" Height="23" Margin="162,164,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
-        <ScrollViewer x:Name="srcGrafica" HorizontalAlignment="Left" Height="367" Margin="10,192,0,0" VerticalAlignment="Top" Width="772" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
+        <ScrollViewer x:Name="srcGrafica" Height="367" Margin="10,192,0,0" Width="772" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
             <Grid>
                 <Polyline Stroke="CornflowerBlue" StrokeThickness="2" Name="plnGrafica"/>
                 <Polyline Stroke="Black" StrokeThickness="1" Name="plnEjeX"/>
