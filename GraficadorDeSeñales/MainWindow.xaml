@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Graficador de Señales" Height="600" Width="800">
     <Grid ScrollViewer.HorizontalScrollBarVisibility="Visible">
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,15,0,0" Height="16" Width="120"><Run Text="Señal "/><Run Text="Parabólica"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,15,0,0" Height="16" Width="120" Text="Función Signo"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,51,0,0" Height="16" Width="51" Visibility="Hidden"><Run Text="Amplitud"/><Run Text=":"/></TextBlock>
         <TextBox x:Name="txtAmplitud" HorizontalAlignment="Left" Height="23" Margin="10,118,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fase:" VerticalAlignment="Top" Margin="10,100,0,0" Height="16" Width="26" Visibility="Hidden"/>
