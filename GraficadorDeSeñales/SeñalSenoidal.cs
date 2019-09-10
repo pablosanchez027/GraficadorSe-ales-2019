@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace GraficadorDeSeñales
 {
-    class SeñalSenoidal
+    class SeñalSenoidal : Señal
     {
         public double Amplitud { get; set; }
         public double Fase { get; set; }
         public double Frecuencia { get; set; }
 
-        public List<Muestra> Muestras { get; set; }
-
         public SeñalSenoidal()
         {
-            Amplitud = 1.0;
-            Fase = 0.0;
-            Frecuencia = 1.0;
+            Fase = Fase;
+            Frecuencia = Frecuencia;
+            Muestras = new List<Muestra>();
+            AmplitudMaxima = 0.0;
         }
 
         public SeñalSenoidal(double amplitud,
@@ -30,7 +29,7 @@ namespace GraficadorDeSeñales
             Muestras = new List<Muestra>();
         }
 
-        public double evaluar(double tiempo)
+        override public double evaluar(double tiempo)
         {
             double resultado;
             resultado =

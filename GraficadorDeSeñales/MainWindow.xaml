@@ -32,9 +32,9 @@
 
         <Grid x:Name="panelConfiguracion" HorizontalAlignment="Left" Height="157" VerticalAlignment="Top" Width="150" Margin="20,58,0,0" Grid.RowSpan="2"/>
         <ComboBox x:Name="cbTipoSeñal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Margin="141,25,0,0" SelectedIndex="0" SelectionChanged="CbTipoSeñal_SelectionChanged">
-            <ComboBoxItem>Señal Exponencial</ComboBoxItem>
+            <ComboBoxItem>Señal Parabólica</ComboBoxItem>
             <ComboBoxItem>Señal Senoidal</ComboBoxItem>
-            <ComboBoxItem>Función Signo</ComboBoxItem>
+            <ComboBoxItem>Señal Exponencial</ComboBoxItem>
         </ComboBox>
 
     </Grid>

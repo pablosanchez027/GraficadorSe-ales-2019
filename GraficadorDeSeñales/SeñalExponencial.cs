@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace GraficadorDeSeñales
 {
-    class SeñalParabolica : Señal
+    class SeñalExponencial : Señal
     {
-
-        public SeñalParabolica()
+        public double Alpha { get; set; }
+        public SeñalExponencial()
         {
             Muestras = new List<Muestra>();
-            AmplitudMaxima = 0.0;
+            Alpha = Alpha;
+        }
+
+        public SeñalExponencial(double alpha)
+        {
+            Alpha = alpha;
+            Muestras = new List<Muestra>();
         }
 
         override public double evaluar(double tiempo)
         {
             double resultado;
-            if (tiempo >= 0)
-            {
-                resultado = (tiempo * tiempo) / 2.0;
-            }
-            else
-            {
-                resultado = 0.0;
-            }
+            resultado = Math.Exp(Alpha * tiempo);
             return resultado;
         }
     }
