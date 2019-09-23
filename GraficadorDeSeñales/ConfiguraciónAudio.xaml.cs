@@ -13,16 +13,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Microsoft.Win32;
+
 namespace GraficadorDeSeñales
 {
     /// <summary>
-    /// Lógica de interacción para ConfiguraciónAudio.xaml
+    /// Interaction logic for ConfiguracionAudio.xaml
     /// </summary>
-    public partial class ConfiguraciónAudio : UserControl
+    public partial class ConfiguracionAudio : UserControl
     {
-        public ConfiguraciónAudio()
+        public ConfiguracionAudio()
         {
             InitializeComponent();
+        }
+
+        private void BtnElegirArchivo_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+
+            if ((bool)fileDialog.ShowDialog())
+            {
+                txtRutaArchivo.Text = fileDialog.FileName;
+            }
         }
     }
 }
