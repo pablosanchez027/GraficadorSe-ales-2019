@@ -11,6 +11,12 @@ namespace GraficadorDeSeñales
         public double X { get; set; }
         public double Y { get; set; }
 
+        public Muestra()
+        {
+            X = 0.0;
+            Y = 0.0;
+        }
+
         public Muestra(double x, double y)
         {
             X = x;
