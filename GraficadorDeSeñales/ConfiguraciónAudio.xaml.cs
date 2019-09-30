@@ -15,27 +15,25 @@ using System.Windows.Shapes;
 
 using Microsoft.Win32;
 
-namespace GraficadorSeñales
+namespace GraficadorDeSeñales
 {
     /// <summary>
-    /// Lógica de interacción para ConfiguracionAudio.xaml
+    /// Lógica de interacción para ConfiguraciónAudio.xaml
     /// </summary>
-    public partial class ConfiguracionAudio : UserControl
+    public partial class ConfiguraciónAudio : UserControl
     {
-        public ConfiguracionAudio()
+        public ConfiguraciónAudio()
         {
             InitializeComponent();
         }
 
         private void BtnElegirArchivo_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog =
-                new OpenFileDialog();
+            OpenFileDialog fileDialog = new OpenFileDialog();
 
             if ((bool)fileDialog.ShowDialog())
             {
-                txtRutaArchivo.Text =
-                    fileDialog.FileName;
+                txtRutaArchivo.Text = fileDialog.FileName;
             }
         }
     }

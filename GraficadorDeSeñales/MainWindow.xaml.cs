@@ -52,16 +52,16 @@ namespace GraficadorDeSeñales
                     double amplitud =
                         double.Parse(
                     ((ConfiguraciónSeñalSenoidal)
-                        (panelConfiguracion.Children[0])).txtAmplitud.Text);
+                        (panelConfiguración.Children[0])).txtAmplitud.Text);
                     double fase =
                         double.Parse(
                             ((ConfiguraciónSeñalSenoidal)
-                            (panelConfiguracion.Children[0])).txtFase.Text
+                            (panelConfiguración.Children[0])).txtFase.Text
                             );
                     double frecuencia =
                         double.Parse(
                             ((ConfiguraciónSeñalSenoidal)
-                            (panelConfiguracion.Children[0])).txtFrecuencia.Text
+                            (panelConfiguración.Children[0])).txtFrecuencia.Text
                             );
                     señal =
                         new SeñalSenoidal(amplitud, fase, frecuencia);
@@ -69,8 +69,8 @@ namespace GraficadorDeSeñales
                     break;
                 case 2:
                     string rutaArchivo =
-                        ((ConfiguracionAudio)
-                        (panelConfiguracion.Children[0])).txtRutaArchivo.Text;
+                        ((ConfiguraciónAudio)
+                        (panelConfiguración.Children[0])).txtRutaArchivo.Text;
                     señal = new SeñalAudio(rutaArchivo);
                     txtTiempoInicial.Text =
                         señal.TiempoInicial.ToString();
@@ -103,7 +103,7 @@ namespace GraficadorDeSeñales
                     double factorEscala =
                         double.Parse(
                         ((OperacionEscalaAmplitud)
-                        (panelConfiguracionOperacion.
+                        (panelConfiguraciónOperacion.
                             Children[0])).txtFactorEscala
                             .Text);
                     señalResultante =
@@ -114,7 +114,7 @@ namespace GraficadorDeSeñales
                     double cantidadDesplazamiento =
                         double.Parse(
                         ((OperacionDesplazamientoAmplitud)
-                        (panelConfiguracionOperacion.
+                        (panelConfiguraciónOperacion.
                             Children[0])).txtCantidadDesplazamiento
                             .Text);
                     señalResultante =
@@ -215,18 +215,18 @@ namespace GraficadorDeSeñales
 
         private void CbTipoSeñal_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            panelConfiguracion.Children.Clear();
+            panelConfiguración.Children.Clear();
             switch (cbTipoSeñal.SelectedIndex)
             {
                 case 0: //Parabolica
                     break;
                 case 1: //Senoidal
-                    panelConfiguracion.Children.Add(
+                    panelConfiguración.Children.Add(
                         new ConfiguraciónSeñalSenoidal());
                     break;
                 case 2:
-                    panelConfiguracion.Children.Add(
-                        new ConfiguracionAudio()
+                    panelConfiguración.Children.Add(
+                        new ConfiguraciónAudio()
                         );
                     break;
                 default:
@@ -236,18 +236,18 @@ namespace GraficadorDeSeñales
 
         private void CbOperacion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            panelConfiguracionOperacion.Children.Clear();
+            panelConfiguraciónOperacion.Children.Clear();
             mostrarSegundaSeñal(false);
             switch (cbOperacion.SelectedIndex)
             {
                 case 0: //Escala de amplitud
-                    panelConfiguracionOperacion.
+                    panelConfiguraciónOperacion.
                         Children.Add(
                             new OperacionEscalaAmplitud()
                         );
                     break;
                 case 1: //Desplazamiento de amplitud
-                    panelConfiguracionOperacion.
+                    panelConfiguraciónOperacion.
                         Children.Add(
                             new OperacionDesplazamientoAmplitud()
                         );
@@ -262,18 +262,18 @@ namespace GraficadorDeSeñales
 
         private void CbTipoSeñal_2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            panelConfiguracion_2.Children.Clear();
+            panelConfiguración_2.Children.Clear();
             switch (cbTipoSeñal_2.SelectedIndex)
             {
                 case 0: //Parabolica
                     break;
                 case 1: //Senoidal
-                    panelConfiguracion_2.Children.Add(
+                    panelConfiguración_2.Children.Add(
                         new ConfiguraciónSeñalSenoidal());
                     break;
                 case 2:
-                    panelConfiguracion_2.Children.Add(
-                        new ConfiguracionAudio()
+                    panelConfiguración_2.Children.Add(
+                        new ConfiguraciónAudio()
                         );
                     break;
                 default:
@@ -289,7 +289,7 @@ namespace GraficadorDeSeñales
                     Visibility.Visible;
                 cbTipoSeñal_2.Visibility =
                     Visibility.Visible;
-                panelConfiguracion_2.Visibility =
+                panelConfiguración_2.Visibility =
                     Visibility.Visible;
             }
             else
@@ -298,7 +298,7 @@ namespace GraficadorDeSeñales
                     Visibility.Hidden;
                 cbTipoSeñal_2.Visibility =
                     Visibility.Hidden;
-                panelConfiguracion_2.Visibility =
+                panelConfiguración_2.Visibility =
                     Visibility.Hidden;
             }
         }
