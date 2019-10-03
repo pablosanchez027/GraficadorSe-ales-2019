@@ -7,16 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Amplitud" VerticalAlignment="Top" Margin="10,6,0,0" Width="68" Height="16" Grid.ColumnSpan="2" />
-        <TextBox x:Name="txtAmplitud" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" Margin="10,27,0,0" Grid.ColumnSpan="2" />
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fase:" VerticalAlignment="Top" Margin="10,55,0,0" Width="68" Height="16" Grid.ColumnSpan="2" />
-        <TextBox x:Name="txtFase" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="10,76,0,0" Grid.ColumnSpan="2" />
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,109,0,0" Width="68" Height="16" Grid.ColumnSpan="2" ><Run Text="F"/><Run Text="Frecuencia"/></TextBlock>
-        <TextBox x:Name="txtFrecuencia" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" Margin="10,130,0,0" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,4,0,0" TextWrapping="Wrap" Text="Amplitud:" VerticalAlignment="Top" />
+        <TextBox x:Name="txtAmplitud" HorizontalAlignment="Left" Height="23" Margin="7,25,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="7,53,0,0" TextWrapping="Wrap" Text="Fase:" VerticalAlignment="Top" />
+        <TextBox x:Name="txtFase" HorizontalAlignment="Left" Height="22" Margin="7,69,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="7,96,0,0" TextWrapping="Wrap" Text="Frecuencia:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFrecuencia" HorizontalAlignment="Left" Height="23" Margin="7,117,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" />
+
 
     </Grid>
 </UserControl>
